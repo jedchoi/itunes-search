@@ -11,6 +11,7 @@ import Swinject
 class FakeItunesSearchDependencyAssembly: Assembly {
     func assemble(container: Container) {
         container.register(ITunesAPIInterface.self) { _ in FakeITunesAPIDataSource() }
+        container.register(ITunesAppSearchingServiceInterface.self) { _ in ITunesAppSearchingService() }
         Logger.track()
     }
 }

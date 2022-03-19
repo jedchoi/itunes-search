@@ -1,5 +1,5 @@
 //
-//  GetDetailAppInformation.swift
+//  GetDetailAppInformationUseCase.swift
 //  itunes-search
 //
 //  Created by JaeHyuk Choi on 2022/03/19.
@@ -8,14 +8,14 @@
 import Foundation
 import ReactiveSwift
 
-class GetDetailAppInformation: UseCaseWithParam {
+class GetDetailAppInformationUseCase: UseCaseWithParam {
     typealias Param = String
-    typealias ReturnValue = String
-    var dataSource: ITunesAPIInterface!
+    typealias ReturnValue = ITunesAppEntity
+    var dataSource: ITunesAppSearchingServiceInterface!
     var disposables = CompositeDisposable()
     
     init() {
-        self.dataSource = DependencyResolver.resolve(ITunesAPIInterface.self)
+        self.dataSource = DependencyResolver.resolve(ITunesAppSearchingServiceInterface.self)
     }
     
     deinit {
@@ -29,15 +29,18 @@ class GetDetailAppInformation: UseCaseWithParam {
                 observer.send(error: TraceError(message: "self is nil"))
                 return
             }
-            self.disposables += self.dataSource.getAppList(key: param).startWithResult { result in
-                switch result {
-                case .success(let value):
-                    Logger.track(value)
-                    observer.send(value: value)
-                    observer.sendCompleted()
-                case .failure(let error):
-                    Logger.track(error.message)
-                    observer.send(error: error)
+            DispatchQueue.global().async {
+                self.disposables += self.dataSource.getDetailAppInformation(title: param).startWithResult { result in
+                    switch result {
+                    case .success(let value):
+                        Logger.track("\(value)")
+                        observer.send(value: value)
+                        observer.sendCompleted()
+                    case .failure(let error):
+                        Logger.track(error.message)
+                        observer.send(error: error)
+                    }
+                    self.disposables.dispose()
                 }
             }
         }

@@ -10,6 +10,7 @@ import Swinject
 
 class ItunesSearchDependencyAssembly: Assembly {
     func assemble(container: Container) {
+        container.register(ITunesAppSearchingServiceInterface.self) { _ in ITunesAppSearchingService() }
         Logger.track()
     }
 }

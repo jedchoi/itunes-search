@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F38E7C6DEAF8A0BF9B496BE /* Pods_itunes_searchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB6FA9C21162A84D83A68D /* Pods_itunes_searchTests.framework */; };
 		8F43CEBD3AFC06A317A4F6C9 /* Pods_itunes_search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4734B4BD3A07A71AE67A8D2 /* Pods_itunes_search.framework */; };
+		B11E44FB27E5B62C00C50423 /* ITunesAppSearchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E44FA27E5B62C00C50423 /* ITunesAppSearchingService.swift */; };
+		B11E44FD27E60EF900C50423 /* ITunesAppSearchingServiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E44FC27E60EF900C50423 /* ITunesAppSearchingServiceEntity.swift */; };
 		B167977F27E4CA5C00CD2C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167977E27E4CA5C00CD2C93 /* AppDelegate.swift */; };
 		B167978127E4CA5D00CD2C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167978027E4CA5C00CD2C93 /* SceneDelegate.swift */; };
 		B167978327E4CA5D00CD2C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167978227E4CA5D00CD2C93 /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		62A9DC7E8BE2DBE7285F1A92 /* Pods-itunes-search-itunes-searchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search-itunes-searchUITests.debug.xcconfig"; path = "Target Support Files/Pods-itunes-search-itunes-searchUITests/Pods-itunes-search-itunes-searchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		76A553E09ADF286CB2938744 /* Pods-itunes-search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search.debug.xcconfig"; path = "Target Support Files/Pods-itunes-search/Pods-itunes-search.debug.xcconfig"; sourceTree = "<group>"; };
 		76EA248BB1FA283E021C1AA8 /* Pods-itunes-search-itunes-searchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search-itunes-searchUITests.release.xcconfig"; path = "Target Support Files/Pods-itunes-search-itunes-searchUITests/Pods-itunes-search-itunes-searchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B11E44FA27E5B62C00C50423 /* ITunesAppSearchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAppSearchingService.swift; sourceTree = "<group>"; };
+		B11E44FC27E60EF900C50423 /* ITunesAppSearchingServiceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAppSearchingServiceEntity.swift; sourceTree = "<group>"; };
 		B167977B27E4CA5C00CD2C93 /* itunes-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itunes-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B167977E27E4CA5C00CD2C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B167978027E4CA5C00CD2C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B11E44F927E5B5C300C50423 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B11E44FA27E5B62C00C50423 /* ITunesAppSearchingService.swift */,
+				B11E44FC27E60EF900C50423 /* ITunesAppSearchingServiceEntity.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B167977227E4CA5C00CD2C93 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				B16797B227E4CB9800CD2C93 /* UseCase */,
+				B11E44F927E5B5C300C50423 /* Service */,
 				B16797B127E4CB8900CD2C93 /* Interface */,
 			);
 			path = Domain;
@@ -497,9 +511,11 @@
 				B16797B627E5627500CD2C93 /* GetDetailAppInformationUseCase.swift in Sources */,
 				B16797B827E5631F00CD2C93 /* ITunesAPIInterface.swift in Sources */,
 				B167978327E4CA5D00CD2C93 /* ViewController.swift in Sources */,
+				B11E44FD27E60EF900C50423 /* ITunesAppSearchingServiceEntity.swift in Sources */,
 				B16797BF27E568B400CD2C93 /* Logger.swift in Sources */,
 				B16797BB27E563B400CD2C93 /* UseCase.swift in Sources */,
 				B16797C927E56F2400CD2C93 /* FakeItunesSearchDependencyAssembly.swift in Sources */,
+				B11E44FB27E5B62C00C50423 /* ITunesAppSearchingService.swift in Sources */,
 				B167977F27E4CA5C00CD2C93 /* AppDelegate.swift in Sources */,
 				B16797C627E56EF500CD2C93 /* ItunesSearchDependencyAssembly.swift in Sources */,
 				B16797BD27E5687F00CD2C93 /* Error.swift in Sources */,

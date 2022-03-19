@@ -10,13 +10,13 @@ import ReactiveSwift
 
 class GetAppListUseCase: UseCaseWithParam {
     typealias Param = String
-    typealias ReturnValue = String
-    var dataSource: ITunesAPIInterface!
+    typealias ReturnValue = [ITunesAppEntity]
+    var dataSource: ITunesAppSearchingServiceInterface!
     var disposables = CompositeDisposable()
     
     init() {
         Logger.track()
-        self.dataSource = DependencyResolver.resolve(ITunesAPIInterface.self)
+        self.dataSource = DependencyResolver.resolve(ITunesAppSearchingServiceInterface.self)
     }
     
     deinit {
@@ -32,17 +32,19 @@ class GetAppListUseCase: UseCaseWithParam {
                 observer.sendInterrupted()
                 return
             }
-            self.disposables += self.dataSource.getAppList(key: param).startWithResult { result in
-                switch result {
-                case .success(let value):
-                    Logger.track(value)
-                    observer.send(value: value)
-                    observer.sendCompleted()
-                case .failure(let error):
-                    Logger.track(error.message)
-                    observer.send(error: error)
+            DispatchQueue.global().async {
+                self.disposables += self.dataSource.getAppList(key: param).startWithResult { result in
+                    switch result {
+                    case .success(let value):
+                        Logger.track("\(value)")
+                        observer.send(value: value)
+                        observer.sendCompleted()
+                    case .failure(let error):
+                        Logger.track(error.message)
+                        observer.send(error: error)
+                    }
+                    self.disposables.dispose()
                 }
-                self.disposables.dispose()
             }
         }
     }

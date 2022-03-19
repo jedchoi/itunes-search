@@ -24,19 +24,51 @@ class itunes_searchTests: XCTestCase {
         disposables.dispose()
     }
 
-    func testGetAppList() throws {
-        let expt = expectation(description: "Test get app list")
+    func testGetAppListDataSource() throws {
+        let expt = expectation(description: "Test get app list from data source")
         disposables += dataSource.getAppList(key: "something").startWithResult { result in
             switch result {
             case .success(let appList):
                 Logger.track("\(appList)")
-                XCTAssert(!appList.isEmpty, "init failed")
+                XCTAssert(!appList.isEmpty, "test failed")
                 expt.fulfill()
             case .failure(let error):
                 Logger.track("\(error)")
             }
         }
-        waitForExpectations(timeout: 1.0, handler: nil)
+        waitForExpectations(timeout: 2.0, handler: nil)
     }
 
+    func testGetAppListService() throws {
+        let expt = expectation(description: "Test get app list from service")
+        let usecase = GetAppListUseCase()
+        disposables += usecase.execute(param: "something").startWithResult { result in
+            switch result {
+            case .success(let appList):
+                Logger.track()
+                XCTAssert(!appList.isEmpty, "test failed")
+                expt.fulfill()
+            case .failure(let error):
+                Logger.track("\(error)")
+            }
+        }
+        waitForExpectations(timeout: 2.0, handler: nil)
+    }
+    
+    func testGetDetailAppInformation() throws {
+        let expt = expectation(description: "Test get app list from service")
+        let usecase = GetDetailAppInformationUseCase()
+        let param = "카카오뱅크"
+        disposables += usecase.execute(param: param).startWithResult { result in
+            switch result {
+            case .success(let appList):
+                Logger.track()
+                XCTAssert(appList.title == param, "test failed")
+                expt.fulfill()
+            case .failure(let error):
+                Logger.track("\(error)")
+            }
+        }
+        waitForExpectations(timeout: 2.0, handler: nil)
+    }
 }
