@@ -35,24 +35,27 @@ final class MainTabHomeWireframe: MainTabHomeWireframeProtocol {
     }
     
     func present(fromWindow window: UIWindow) {
-        window.rootViewController = view
-
-        mainWindow = window
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [view]
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
     }
     
     private func addTabViewControllers() {
+        var tabViewContorllers = [UIViewController]()
+        tabViewContorllers.append(TodayViewController())
+        tabViewContorllers.append(GameViewController())
+        tabViewContorllers.append(AppViewController())
+        tabViewContorllers.append(UpdateViewController())
+        tabViewContorllers.append(getITunesAppSearchViewController())
+
+        self.view.setViewControllers(tabViewContorllers, animated: false)
+    }
+    
+    private func getITunesAppSearchViewController() -> UIViewController {
         let itunesAppSearchWireframe = ItunesAppSearchWireframe()
         itunesAppSearchWireframe.setup()
-        tabBarWireframes.append(TodayViewController())
-        tabBarWireframes.append(GameViewController())
-        tabBarWireframes.append(AppViewController())
-        tabBarWireframes.append(UpdateViewController())
-        tabBarWireframes.append(itunesAppSearchWireframe)
-        
-        var tabViewContorllers = [UIViewController]()
-        for wireFrame in tabBarWireframes {
-            tabViewContorllers.append(wireFrame.configuredViewController())
-        }
-        self.view.setViewControllers(tabViewContorllers, animated: false)
+        let navigationController = UINavigationController(rootViewController: itunesAppSearchWireframe.configuredViewController())
+        return navigationController
     }
 }

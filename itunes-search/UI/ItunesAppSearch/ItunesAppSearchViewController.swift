@@ -23,7 +23,8 @@ final class ItunesAppSearchViewController: UIViewController {
     }
 
     func setupUI() {
-
+        let searchController = UISearchController(searchResultsController:  nil)
+        self.navigationItem.searchController = searchController
     }
 }
 
