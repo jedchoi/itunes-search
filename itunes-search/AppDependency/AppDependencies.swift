@@ -19,4 +19,10 @@ class AppDependencies {
     let assembler = Assembler([
         FakeItunesSearchDependencyAssembly()
     ])
+    
+    func installRootViewControllerIntoWindow(_ window: UIWindow) {
+        let mainTabHomeWireframe = MainTabHomeWireframe()
+        mainTabHomeWireframe.setup()
+        mainTabHomeWireframe.present(fromWindow: window)
+    }
 }
