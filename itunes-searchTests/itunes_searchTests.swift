@@ -61,9 +61,9 @@ class itunes_searchTests: XCTestCase {
         let param = "카카오뱅크"
         disposables += usecase.execute(param: param).startWithResult { result in
             switch result {
-            case .success(let appList):
+            case .success(let appDetail):
                 Logger.track()
-                XCTAssert(appList.title == param, "test failed")
+                XCTAssert(!appDetail.isEmpty, "test failed")
                 expt.fulfill()
             case .failure(let error):
                 Logger.track("\(error)")

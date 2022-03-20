@@ -10,7 +10,7 @@ import ReactiveSwift
 
 class GetAppListUseCase: UseCaseWithParam {
     typealias Param = String
-    typealias ReturnValue = [ITunesAppEntity]
+    typealias ReturnValue = String
     var dataSource: ITunesAppSearchingServiceInterface!
     var disposables = CompositeDisposable()
     
@@ -36,8 +36,12 @@ class GetAppListUseCase: UseCaseWithParam {
                 self.disposables += self.dataSource.getAppList(key: param).startWithResult { result in
                     switch result {
                     case .success(let value):
-                        Logger.track("\(value)")
-                        observer.send(value: value)
+                        // Encode data to remove dependency between Entity(domain) and ViewModel(UI)
+                        guard let data = try? JSONEncoder().encode(value), let encodedAppList = String.init(data: data, encoding: .utf8) else {
+                            observer.send(error: TraceError(message: "encoding error", code: ""))
+                            return
+                        }
+                        observer.send(value: encodedAppList)
                         observer.sendCompleted()
                     case .failure(let error):
                         Logger.track(error.message)
