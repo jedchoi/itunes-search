@@ -44,10 +44,9 @@ final class ItunesAppSearchInteractor {
 
 extension ItunesAppSearchInteractor: ItunesAppSearchInteractorInputProtocol {
     func onViewDidLoad() {
-        getAppList(key: "as")
     }
     
     func searchApp(key: String) {
-        
+        getAppList(key: key)
     }
 }

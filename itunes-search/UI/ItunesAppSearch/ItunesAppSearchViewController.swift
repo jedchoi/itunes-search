@@ -30,8 +30,12 @@ final class ItunesAppSearchViewController: UIViewController {
     
     private func setupSearchController() {
         let searchController = UISearchController(searchResultsController:  nil)
+        searchController.searchBar.placeholder = "게임, 앱, 스토리 등"
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
-        self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationItem.title = "검색"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -46,5 +50,23 @@ extension ItunesAppSearchViewController: ItunesAppSearchViewProtocol {
         DispatchQueue.main.async {
             Logger.track("")
         }
+    }
+}
+
+extension ItunesAppSearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        Logger.track(searchController.searchBar.searchTextField.text ?? "")
+        // if you want to show recommended list, implement this function
+    }
+}
+
+extension ItunesAppSearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let key = searchBar.text else {
+            Logger.track("no text")
+            return
+        }
+        Logger.track(key)
+        interactor.searchApp(key: key)
     }
 }
