@@ -11,6 +11,7 @@ import ReactiveSwift
 protocol ItunesAppSearchInteractorInputProtocol: AnyObject {
     func onViewDidLoad()
     func searchApp(key: String)
+    func itemDidSelect(title: String)
 }
 
 final class ItunesAppSearchInteractor {
@@ -48,5 +49,9 @@ extension ItunesAppSearchInteractor: ItunesAppSearchInteractorInputProtocol {
     
     func searchApp(key: String) {
         getAppList(key: key)
+    }
+    
+    func itemDidSelect(title: String) {
+        wireframe.routeToDetail(title: title)
     }
 }

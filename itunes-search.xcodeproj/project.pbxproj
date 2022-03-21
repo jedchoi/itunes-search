@@ -46,6 +46,8 @@
 		B178CC6127E6FD7200258026 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6027E6FD7200258026 /* AppViewController.swift */; };
 		B178CC6327E6FD7F00258026 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6227E6FD7F00258026 /* UpdateViewController.swift */; };
 		B178CC6527E894DC00258026 /* ITunesAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */; };
+		B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */; };
+		B178CC6B27E8BE0700258026 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6A27E8BE0700258026 /* UIImageView.swift */; };
 		DA2B47FB93B301F20932E1C5 /* Pods_itunes_search_itunes_searchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		B178CC6027E6FD7200258026 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		B178CC6227E6FD7F00258026 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPIDataSource.swift; sourceTree = "<group>"; };
+		B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCollectionViewCell.swift; sourceTree = "<group>"; };
+		B178CC6A27E8BE0700258026 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		B4734B4BD3A07A71AE67A8D2 /* Pods_itunes_search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search_itunes_searchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A710344FDFB9A5651EDB71 /* Pods-itunes-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search.release.xcconfig"; path = "Target Support Files/Pods-itunes-search/Pods-itunes-search.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		B11E44FE27E6C65E00C50423 /* ItunesAppSearch */ = {
 			isa = PBXGroup;
 			children = (
+				B178CC6727E8B6A000258026 /* CollectionViewCell */,
 				B11E450027E6C6F700C50423 /* ItunesAppSearchViewController.swift */,
 				B11E450427E6C72900C50423 /* ItunesAppSearchInteractor.swift */,
 				B11E450627E6C74D00C50423 /* ItunesAppSearchWireFrame.swift */,
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B11E450B27E6CAF000C50423 /* UIViewController.swift */,
+				B178CC6A27E8BE0700258026 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,6 +359,14 @@
 				B178CC6227E6FD7F00258026 /* UpdateViewController.swift */,
 			);
 			path = TempTabViews;
+			sourceTree = "<group>";
+		};
+		B178CC6727E8B6A000258026 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,6 +624,8 @@
 				B16797BF27E568B400CD2C93 /* Logger.swift in Sources */,
 				B16797BB27E563B400CD2C93 /* UseCase.swift in Sources */,
 				B16797C927E56F2400CD2C93 /* FakeItunesSearchDependencyAssembly.swift in Sources */,
+				B178CC6B27E8BE0700258026 /* UIImageView.swift in Sources */,
+				B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */,
 				B11E44FB27E5B62C00C50423 /* ITunesAppSearchingService.swift in Sources */,
 				B167977F27E4CA5C00CD2C93 /* AppDelegate.swift in Sources */,
 				B178CC5627E6E1DA00258026 /* MainTabHomeInteractor.swift in Sources */,
