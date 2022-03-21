@@ -15,4 +15,9 @@ class TraceError: Error {
         self.message = message
         self.code = code
     }
+    
+    public init(error: Error?) {
+        self.message = error?.localizedDescription ?? ""
+        self.code = ""
+    }
 }

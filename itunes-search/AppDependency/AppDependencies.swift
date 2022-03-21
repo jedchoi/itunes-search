@@ -17,7 +17,7 @@ class AppDependencies {
     static let share = AppDependencies()
 
     let assembler = Assembler([
-        FakeItunesSearchDependencyAssembly()
+        ItunesSearchDependencyAssembly()
     ])
     
     func installRootViewControllerIntoWindow(_ window: UIWindow) {
