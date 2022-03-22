@@ -16,6 +16,12 @@ extension UIViewController {
     static func instantiate(_ storyboard: Storyboard) -> Self {
         return storyboard.viewController(viewControllerClass: self)
     }
+    
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
 }
 
 

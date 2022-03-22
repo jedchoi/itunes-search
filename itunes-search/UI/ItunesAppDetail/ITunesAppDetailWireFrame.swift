@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-protocol ITunesAppDetailWireFrameProtocol: AnyObject {
+protocol ItunesAppDetailWireFrameProtocol: AnyObject {
     // Interactor -> Wireframe
     func route()
     func back()
 }
 
-final class ITunesAppDetailWireFrame {
-    weak var view: ItunesAppSearchViewController?
+final class ItunesAppDetailWireFrame {
+    weak var view: ItunesAppDetailViewController?
     private var appTitle: String!
 
     init(title: String) {
@@ -23,11 +23,11 @@ final class ITunesAppDetailWireFrame {
     }
 
     func setup() {
-//        let view = ItunesAppSearchViewController.instantiate(.ItunesAppSearch)
-//        let interactor = ItunesAppSearchInteractor(view: view, wireframe: self)
-//
-//        view.interactor = interactor
-//        self.view = view
+        let view = ItunesAppDetailViewController.instantiate(.ItunesAppDetail)
+        let interactor = ItunesAppDetailInteractor(view: view, wireframe: self, title: appTitle)
+
+        view.interactor = interactor
+        self.view = view
     }
 
     func push(from presentedViewController: UIViewController) {
@@ -39,7 +39,7 @@ final class ITunesAppDetailWireFrame {
     }
 }
 
-extension ITunesAppDetailWireFrame: ITunesAppDetailWireFrameProtocol {
+extension ItunesAppDetailWireFrame: ItunesAppDetailWireFrameProtocol {
     func route() {
     }
     

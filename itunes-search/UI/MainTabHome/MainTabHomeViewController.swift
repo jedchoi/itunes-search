@@ -24,11 +24,13 @@ final class MainTabHomeViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lockOrientation(.portrait)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureTabBarItem()
+        self.selectedIndex = 4
     }
 }
 
@@ -41,11 +43,11 @@ private extension MainTabHomeViewController {
         guard let tabViewControllers = viewControllers else { return }
 
         let items = [
-            UITabBarItem(tabBarSystemItem: .favorites, tag: 1),
-            UITabBarItem(tabBarSystemItem: .featured, tag: 2),
-            UITabBarItem(tabBarSystemItem: .topRated, tag: 3),
-            UITabBarItem(tabBarSystemItem: .bookmarks, tag: 4),
-            UITabBarItem(tabBarSystemItem: .search, tag: 5)
+            UITabBarItem(title: "투데이", image: UIImage.init(systemName: "doc.text.fill"), tag: 1),
+            UITabBarItem(title: "게임", image: UIImage.init(systemName: "gamecontroller.fill"), tag: 2),
+            UITabBarItem(title: "앱", image: UIImage.init(systemName: "square.stack.3d.up.fill"), tag: 3),
+            UITabBarItem(title: "업데이트", image: UIImage.init(systemName: "square.and.arrow.down.fill"), tag: 4),
+            UITabBarItem(title: "검색", image: UIImage.init(systemName: "magnifyingglass"), tag: 5)
         ]
 
         (0 ..< tabViewControllers.count).forEach { tabViewControllers[$0].tabBarItem = items[$0] }

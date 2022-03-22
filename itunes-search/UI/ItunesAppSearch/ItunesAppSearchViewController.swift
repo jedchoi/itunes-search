@@ -10,7 +10,6 @@ import UIKit
 
 protocol ItunesAppSearchViewProtocol: AnyObject {
     // interactor -> View
-    func updateUI(_ isConnected: Bool)
     func displayAppList(apps: [ITunesSearchAppViewModel])
 }
 
@@ -53,12 +52,6 @@ extension ItunesAppSearchViewController: ItunesAppSearchViewProtocol {
         self.apps = apps
         DispatchQueue.main.async {
             self.appListCollectionView.reloadData()
-        }
-    }
-    
-    func updateUI(_ isConnected: Bool) {
-        DispatchQueue.main.async {
-            Logger.track("")
         }
     }
 }

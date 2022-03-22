@@ -49,7 +49,7 @@ extension ItunesAppSearchWireframe: ItunesAppSearchWireframeProtocol {
         }
         Logger.track("route to detail page")
         
-        let wireframe = ITunesAppDetailWireFrame(title: title)
+        let wireframe = ItunesAppDetailWireFrame(title: title)
         wireframe.setup()
         wireframe.push(from: view)
     }

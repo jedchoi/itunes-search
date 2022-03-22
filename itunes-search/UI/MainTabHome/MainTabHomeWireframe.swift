@@ -35,9 +35,7 @@ final class MainTabHomeWireframe: MainTabHomeWireframeProtocol {
     }
     
     func present(fromWindow window: UIWindow) {
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [view]
-        window.rootViewController = navigationController
+        window.rootViewController = view
         window.makeKeyAndVisible()
     }
     

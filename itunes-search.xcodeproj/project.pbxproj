@@ -35,7 +35,6 @@
 		B16797C427E56E7200CD2C93 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16797C327E56E7200CD2C93 /* AppDependencies.swift */; };
 		B16797C627E56EF500CD2C93 /* ItunesSearchDependencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16797C527E56EF500CD2C93 /* ItunesSearchDependencyAssembly.swift */; };
 		B16797C927E56F2400CD2C93 /* FakeItunesSearchDependencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16797C827E56F2400CD2C93 /* FakeItunesSearchDependencyAssembly.swift */; };
-		B178CC4C27E6D14000258026 /* ITunesAppDetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC4B27E6D14000258026 /* ITunesAppDetailWireFrame.swift */; };
 		B178CC4E27E6D3F200258026 /* ItunesAppSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B178CC4D27E6D3F200258026 /* ItunesAppSearch.storyboard */; };
 		B178CC5227E6E1B100258026 /* MainTabHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B178CC5127E6E1B100258026 /* MainTabHome.storyboard */; };
 		B178CC5427E6E1BF00258026 /* MainTabHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC5327E6E1BF00258026 /* MainTabHomeViewController.swift */; };
@@ -48,6 +47,11 @@
 		B178CC6527E894DC00258026 /* ITunesAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */; };
 		B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */; };
 		B178CC6B27E8BE0700258026 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6A27E8BE0700258026 /* UIImageView.swift */; };
+		B1D1BCC327EA06B0001E8CA6 /* ItunesAppDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BCBE27EA06AF001E8CA6 /* ItunesAppDetailViewModel.swift */; };
+		B1D1BCC427EA06B0001E8CA6 /* ItunesAppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BCBF27EA06AF001E8CA6 /* ItunesAppDetailViewController.swift */; };
+		B1D1BCC527EA06B0001E8CA6 /* ItunesAppDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BCC027EA06AF001E8CA6 /* ItunesAppDetailInteractor.swift */; };
+		B1D1BCC627EA06B0001E8CA6 /* ItunesAppDetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BCC127EA06AF001E8CA6 /* ItunesAppDetailWireFrame.swift */; };
+		B1D1BCC727EA06B0001E8CA6 /* ItunesAppDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D1BCC227EA06B0001E8CA6 /* ItunesAppDetail.storyboard */; };
 		DA2B47FB93B301F20932E1C5 /* Pods_itunes_search_itunes_searchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +108,6 @@
 		B16797C327E56E7200CD2C93 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		B16797C527E56EF500CD2C93 /* ItunesSearchDependencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchDependencyAssembly.swift; sourceTree = "<group>"; };
 		B16797C827E56F2400CD2C93 /* FakeItunesSearchDependencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeItunesSearchDependencyAssembly.swift; sourceTree = "<group>"; };
-		B178CC4B27E6D14000258026 /* ITunesAppDetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAppDetailWireFrame.swift; sourceTree = "<group>"; };
 		B178CC4D27E6D3F200258026 /* ItunesAppSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItunesAppSearch.storyboard; sourceTree = "<group>"; };
 		B178CC5127E6E1B100258026 /* MainTabHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabHome.storyboard; sourceTree = "<group>"; };
 		B178CC5327E6E1BF00258026 /* MainTabHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabHomeViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +120,11 @@
 		B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPIDataSource.swift; sourceTree = "<group>"; };
 		B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCollectionViewCell.swift; sourceTree = "<group>"; };
 		B178CC6A27E8BE0700258026 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		B1D1BCBE27EA06AF001E8CA6 /* ItunesAppDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesAppDetailViewModel.swift; sourceTree = "<group>"; };
+		B1D1BCBF27EA06AF001E8CA6 /* ItunesAppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesAppDetailViewController.swift; sourceTree = "<group>"; };
+		B1D1BCC027EA06AF001E8CA6 /* ItunesAppDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesAppDetailInteractor.swift; sourceTree = "<group>"; };
+		B1D1BCC127EA06AF001E8CA6 /* ItunesAppDetailWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesAppDetailWireFrame.swift; sourceTree = "<group>"; };
+		B1D1BCC227EA06B0001E8CA6 /* ItunesAppDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItunesAppDetail.storyboard; sourceTree = "<group>"; };
 		B4734B4BD3A07A71AE67A8D2 /* Pods_itunes_search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search_itunes_searchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A710344FDFB9A5651EDB71 /* Pods-itunes-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search.release.xcconfig"; path = "Target Support Files/Pods-itunes-search/Pods-itunes-search.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,7 +207,11 @@
 		B11E44FF27E6C68F00C50423 /* ItunesAppDetail */ = {
 			isa = PBXGroup;
 			children = (
-				B178CC4B27E6D14000258026 /* ITunesAppDetailWireFrame.swift */,
+				B1D1BCC227EA06B0001E8CA6 /* ItunesAppDetail.storyboard */,
+				B1D1BCC027EA06AF001E8CA6 /* ItunesAppDetailInteractor.swift */,
+				B1D1BCBF27EA06AF001E8CA6 /* ItunesAppDetailViewController.swift */,
+				B1D1BCBE27EA06AF001E8CA6 /* ItunesAppDetailViewModel.swift */,
+				B1D1BCC127EA06AF001E8CA6 /* ItunesAppDetailWireFrame.swift */,
 			);
 			path = ItunesAppDetail;
 			sourceTree = "<group>";
@@ -481,6 +493,7 @@
 				B178CC5227E6E1B100258026 /* MainTabHome.storyboard in Resources */,
 				B178CC4E27E6D3F200258026 /* ItunesAppSearch.storyboard in Resources */,
 				B167978B27E4CA5F00CD2C93 /* LaunchScreen.storyboard in Resources */,
+				B1D1BCC727EA06B0001E8CA6 /* ItunesAppDetail.storyboard in Resources */,
 				B167978827E4CA5F00CD2C93 /* Assets.xcassets in Resources */,
 				B167978627E4CA5D00CD2C93 /* Main.storyboard in Resources */,
 			);
@@ -612,9 +625,11 @@
 			files = (
 				B16797B427E5625500CD2C93 /* GetAppListUseCase.swift in Sources */,
 				B11E450527E6C72900C50423 /* ItunesAppSearchInteractor.swift in Sources */,
-				B178CC4C27E6D14000258026 /* ITunesAppDetailWireFrame.swift in Sources */,
 				B178CC6527E894DC00258026 /* ITunesAPIDataSource.swift in Sources */,
+				B1D1BCC327EA06B0001E8CA6 /* ItunesAppDetailViewModel.swift in Sources */,
 				B16797C427E56E7200CD2C93 /* AppDependencies.swift in Sources */,
+				B1D1BCC627EA06B0001E8CA6 /* ItunesAppDetailWireFrame.swift in Sources */,
+				B1D1BCC527EA06B0001E8CA6 /* ItunesAppDetailInteractor.swift in Sources */,
 				B178CC5F27E6FD5E00258026 /* GameViewController.swift in Sources */,
 				B178CC5827E6E1F500258026 /* MainTabHomeWireframe.swift in Sources */,
 				B16797B627E5627500CD2C93 /* GetDetailAppInformationUseCase.swift in Sources */,
@@ -627,6 +642,7 @@
 				B178CC6B27E8BE0700258026 /* UIImageView.swift in Sources */,
 				B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */,
 				B11E44FB27E5B62C00C50423 /* ITunesAppSearchingService.swift in Sources */,
+				B1D1BCC427EA06B0001E8CA6 /* ItunesAppDetailViewController.swift in Sources */,
 				B167977F27E4CA5C00CD2C93 /* AppDelegate.swift in Sources */,
 				B178CC5627E6E1DA00258026 /* MainTabHomeInteractor.swift in Sources */,
 				B11E450727E6C74D00C50423 /* ItunesAppSearchWireFrame.swift in Sources */,
