@@ -40,6 +40,23 @@ struct ItunesAppDetailViewModel: Codable {
         case description = "description"
     }
     
+    init() {
+        id = 123456
+        mainAppIconUrl = ""
+        title = ""
+        subTitle = ""
+        averageUserRating = 0.0
+        userRatingCount = 0
+        price = "무료"
+        screenshotUrls = []
+        sellerName = ""
+        genres = []
+        contentAdvisoryRating = ""
+        appVersion = ""
+        releaseNotes = ""
+        description = ""
+    }
+    
     func showAppTitle() {
         Logger.track("title: \(title)")
     }

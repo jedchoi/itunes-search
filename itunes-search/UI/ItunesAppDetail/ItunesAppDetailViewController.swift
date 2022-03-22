@@ -15,11 +15,17 @@ protocol ItunesAppDetailViewProtocol: AnyObject {
 
 final class ItunesAppDetailViewController: UIViewController {
     var interactor: ItunesAppDetailInteractorInputProtocol!
-    var app: ItunesAppDetailViewModel? {
+    var app: ItunesAppDetailViewModel = ItunesAppDetailViewModel() {
         didSet {
             updateUI()
         }
     }
+    
+    @IBOutlet var appIconImageView: UIImageView!
+    @IBOutlet var appTitle: UILabel!
+    @IBOutlet var artist: UILabel!
+    @IBOutlet var priceButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +33,17 @@ final class ItunesAppDetailViewController: UIViewController {
     }
     
     private func updateUI() {
-        
+        DispatchQueue.main.async {
+            self.updateAppTitleView()
+
+        }
+    }
+    
+    private func updateAppTitleView() {
+        appIconImageView.load(from: app.mainAppIconUrl)
+        appTitle.text = app.title
+        artist.text = app.sellerName
+        priceButton.titleLabel?.text = app.price
     }
 }
 

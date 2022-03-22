@@ -208,10 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				B1D1BCC227EA06B0001E8CA6 /* ItunesAppDetail.storyboard */,
-				B1D1BCC027EA06AF001E8CA6 /* ItunesAppDetailInteractor.swift */,
 				B1D1BCBF27EA06AF001E8CA6 /* ItunesAppDetailViewController.swift */,
-				B1D1BCBE27EA06AF001E8CA6 /* ItunesAppDetailViewModel.swift */,
+				B1D1BCC027EA06AF001E8CA6 /* ItunesAppDetailInteractor.swift */,
 				B1D1BCC127EA06AF001E8CA6 /* ItunesAppDetailWireFrame.swift */,
+				B1D1BCBE27EA06AF001E8CA6 /* ItunesAppDetailViewModel.swift */,
 			);
 			path = ItunesAppDetail;
 			sourceTree = "<group>";
