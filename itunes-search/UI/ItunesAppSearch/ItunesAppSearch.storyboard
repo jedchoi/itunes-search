@@ -70,9 +70,26 @@
                                                                                     <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-85-t4i">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-Cs-50j">
                                                                                     <rect key="frame" x="0.0" y="14" width="60.5" height="5.5"/>
-                                                                                </stackView>
+                                                                                    <subviews>
+                                                                                        <view contentMode="left" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-hg-Ndi" customClass="CosmosView" customModule="Cosmos">
+                                                                                            <rect key="frame" x="-0.5" y="-3" width="35.5" height="5.5"/>
+                                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <userDefinedRuntimeAttributes>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                                                                    <integer key="value" value="0"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                            </userDefinedRuntimeAttributes>
+                                                                                        </view>
+                                                                                    </subviews>
+                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="bottom" secondItem="Wd9-hg-Ndi" secondAttribute="bottom" constant="3" id="Xeb-ua-Pi7"/>
+                                                                                        <constraint firstItem="Wd9-hg-Ndi" firstAttribute="top" secondItem="gqq-Cs-50j" secondAttribute="top" constant="3" id="fTI-6M-j1L"/>
+                                                                                        <constraint firstItem="Wd9-hg-Ndi" firstAttribute="leading" secondItem="gqq-Cs-50j" secondAttribute="leading" id="lhP-iN-8Dt"/>
+                                                                                    </constraints>
+                                                                                </view>
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstItem="f50-Re-DNt" firstAttribute="height" secondItem="uNC-cT-N8x" secondAttribute="height" multiplier="0.275" id="WRY-ur-dI4"/>
@@ -208,6 +225,7 @@
                                         <connections>
                                             <outlet property="appIcon" destination="kvA-dO-3Zz" id="AFl-Rr-0kq"/>
                                             <outlet property="priceButton" destination="AmV-ER-HXj" id="rPP-nX-ttR"/>
+                                            <outlet property="starRatingView" destination="Wd9-hg-Ndi" id="jMO-8v-NoJ"/>
                                             <outlet property="subTitle" destination="f50-Re-DNt" id="EF2-Fn-mLF"/>
                                             <outlet property="title" destination="fNa-Yk-eU5" id="uU9-D0-WT0"/>
                                             <outletCollection property="screenShots" destination="5ij-j6-3av" collectionClass="NSMutableArray" id="Ayp-Qu-PtF"/>
@@ -236,6 +254,11 @@
             <point key="canvasLocation" x="9" y="123"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Wd9-hg-Ndi">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
