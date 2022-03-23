@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailNewFeatureHeightUpdateDelegate: AnyObject {
-    func updateHeight(height: CGFloat)
+    func updateNewFeatureHeight(height: CGFloat)
 }
 
 public let DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT: CGFloat = 65.0
@@ -57,25 +57,18 @@ class DetailNewFeatureView: UIView {
     }
     
     private func updateUI() {
-        let textViewHeight = getTextViewHeight()
+        let textViewHeight = releaseNote.estimatedHeight
         if textViewHeight > DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT {
             moreButton.isHidden = false
         } else {
             moreButton.isHidden = true
-            delegate?.updateHeight(height: textViewHeight)
+            delegate?.updateNewFeatureHeight(height: textViewHeight)
         }
-    }
-
-    private func getTextViewHeight() -> CGFloat {
-        let size = CGSize(width: releaseNote.frame.width, height: .infinity)
-        let estimatedSize = releaseNote.sizeThatFits(size)
-        Logger.track("estimatedSize \(estimatedSize)")
-        return estimatedSize.height
     }
     
     @IBAction func moreButtonPressed(_ sender: Any) {
         moreButton.isHidden = true
-        delegate?.updateHeight(height: getTextViewHeight())
+        delegate?.updateNewFeatureHeight(height: releaseNote.estimatedHeight)
     }
 }
 
@@ -88,6 +81,15 @@ struct ItunesDetailNewFeatureViewModel: Codable {
         case appVersion = "version"
         case releaseNotes = "releaseNotes"
         case currentVersionReleaseDate = "currentVersionReleaseDate"
+    }
+}
+
+extension UITextView {
+    var estimatedHeight: CGFloat {
+        let size = CGSize(width: self.frame.width, height: .infinity)
+        let estimatedSize = self.sizeThatFits(size)
+        Logger.track("estimatedSize \(estimatedSize)")
+        return estimatedSize.height
     }
 }
     

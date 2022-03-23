@@ -88,6 +88,13 @@
                                                     <constraint firstAttribute="height" constant="400" id="tp3-08-KjK"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-7g-XAG" userLabel="Description View" customClass="DetailDescriptionView" customModule="itunes_search" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="801.5" width="384" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="EXJ-Ly-VUd"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="41i-QE-0Q6"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,12 +105,15 @@
                                             <constraint firstItem="a4u-84-vHw" firstAttribute="top" secondItem="QsE-8r-qMx" secondAttribute="bottom" constant="10" id="Fzm-f9-UEb"/>
                                             <constraint firstItem="LAh-yl-Knw" firstAttribute="top" secondItem="a4u-84-vHw" secondAttribute="bottom" constant="10" id="I9M-WV-x8n"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="INc-Md-3YX"/>
+                                            <constraint firstItem="rFb-7g-XAG" firstAttribute="top" secondItem="QD0-Vu-fxx" secondAttribute="bottom" constant="15" id="KtF-4Y-klf"/>
+                                            <constraint firstItem="rFb-7g-XAG" firstAttribute="centerX" secondItem="41i-QE-0Q6" secondAttribute="centerX" id="RTO-15-TVI"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="height" secondItem="41i-QE-0Q6" secondAttribute="width" multiplier="0.3" id="Rza-MS-ung"/>
                                             <constraint firstItem="QD0-Vu-fxx" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="U9t-Nb-nmO"/>
                                             <constraint firstItem="a4u-84-vHw" firstAttribute="height" secondItem="QsE-8r-qMx" secondAttribute="height" multiplier="0.75" id="YoS-ow-Ezy"/>
                                             <constraint firstItem="QD0-Vu-fxx" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="efJ-jB-L7H"/>
                                             <constraint firstItem="LAh-yl-Knw" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="iay-lA-wSE"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="top" secondItem="lEU-Mq-lAp" secondAttribute="top" id="ipr-xR-4NL"/>
+                                            <constraint firstItem="rFb-7g-XAG" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="m1x-2G-SzI"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="qEv-bl-Ta2"/>
                                             <constraint firstItem="LAh-yl-Knw" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="qQZ-9x-i7H"/>
                                             <constraint firstItem="QD0-Vu-fxx" firstAttribute="top" secondItem="LAh-yl-Knw" secondAttribute="bottom" constant="15" id="tra-TA-Sye"/>
@@ -132,6 +142,8 @@
                     </view>
                     <connections>
                         <outlet property="attributeView" destination="a4u-84-vHw" id="axd-Pz-GzH"/>
+                        <outlet property="descriptionView" destination="rFb-7g-XAG" id="jbW-Cm-jma"/>
+                        <outlet property="descriptionViewHeightConstraint" destination="EXJ-Ly-VUd" id="jur-Oj-bOs"/>
                         <outlet property="newFeatureView" destination="LAh-yl-Knw" id="zBN-qJ-BCL"/>
                         <outlet property="newFeatureViewHeightConstraint" destination="oeF-mb-X1q" id="haE-CC-hXP"/>
                         <outlet property="screenshotCollectionView" destination="ig5-48-zju" id="th4-xP-3aK"/>

@@ -26,6 +26,8 @@ final class ItunesAppDetailViewController: UIViewController {
     @IBOutlet weak var newFeatureView: DetailNewFeatureView!
     @IBOutlet weak var newFeatureViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var screenshotCollectionView: DetailScreenShotCollectionView!
+    @IBOutlet weak var descriptionView: DetailDescriptionView!
+    @IBOutlet weak var descriptionViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +36,16 @@ final class ItunesAppDetailViewController: UIViewController {
     
     private func updateUI() {
         DispatchQueue.main.async {
-            self.updateAppTitleView()
-
+            guard let data = try? JSONEncoder().encode(self.app), let encodedData = String.init(data: data, encoding: .utf8) else {
+                Logger.track("Encode Error")
+                return
+            }
+            self.titleView.setup(data: encodedData)
+            self.attributeView.setup(data: encodedData)
+            self.newFeatureView.setup(data: encodedData, delegate: self)
+            self.screenshotCollectionView.setup(data: encodedData)
+            self.descriptionView.setup(data: encodedData, delegate: self)
         }
-    }
-    
-    private func updateAppTitleView() {
-        guard let data = try? JSONEncoder().encode(app), let encodedData = String.init(data: data, encoding: .utf8) else {
-            Logger.track("Encode Error")
-            return
-        }
-        titleView.setup(data: encodedData)
-        attributeView.setup(data: encodedData)
-        newFeatureView.setup(data: encodedData, delegate: self)
-        screenshotCollectionView.setup(data: encodedData)
     }
 }
 
@@ -58,8 +56,15 @@ extension ItunesAppDetailViewController: ItunesAppDetailViewProtocol {
 }
 
 extension ItunesAppDetailViewController: DetailNewFeatureHeightUpdateDelegate {
-    func updateHeight(height: CGFloat) {
+    func updateNewFeatureHeight(height: CGFloat) {
         Logger.track("text view height : \(height)")
         newFeatureViewHeightConstraint.constant = DETAIL_NEW_FEATURE_VIEW_DEFAULT_HEIGHT + (height - DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT)
+    }
+}
+
+extension ItunesAppDetailViewController: DetailDescriptionHeightUpdateDelegate {
+    func updateDescriptionHeight(height: CGFloat) {
+        Logger.track("text view height : \(height)")
+        descriptionViewHeightConstraint.constant = height
     }
 }
