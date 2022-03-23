@@ -25,6 +25,7 @@ final class ItunesAppDetailViewController: UIViewController {
     @IBOutlet weak var attributeView: DetailAppAttributeView!
     @IBOutlet weak var newFeatureView: DetailNewFeatureView!
     @IBOutlet weak var newFeatureViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var screenshotCollectionView: DetailScreenShotCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ final class ItunesAppDetailViewController: UIViewController {
         titleView.setup(data: encodedData)
         attributeView.setup(data: encodedData)
         newFeatureView.setup(data: encodedData, delegate: self)
+        screenshotCollectionView.setup(data: encodedData)
     }
 }
 
