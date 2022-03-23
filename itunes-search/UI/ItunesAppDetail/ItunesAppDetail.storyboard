@@ -27,55 +27,19 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-84-vHw" userLabel="Star View">
-                                                <rect key="frame" x="0.0" y="124" width="414" height="62.5"/>
-                                                <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igY-n7-ZqG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF4-X9-TPO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="500" height="62.5"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6U-fx-z3N">
-                                                                        <rect key="frame" x="130" y="-33" width="240" height="128"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="500" id="z2v-gU-Hae"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="xF4-X9-TPO" firstAttribute="bottom" secondItem="urA-eP-ewX" secondAttribute="bottom" id="Edu-fU-P59"/>
-                                                            <constraint firstItem="xF4-X9-TPO" firstAttribute="height" secondItem="NkE-pC-xEC" secondAttribute="height" id="Fmj-I0-id5"/>
-                                                            <constraint firstItem="xF4-X9-TPO" firstAttribute="leading" secondItem="urA-eP-ewX" secondAttribute="leading" id="cAN-8k-kpK"/>
-                                                            <constraint firstItem="urA-eP-ewX" firstAttribute="top" secondItem="xF4-X9-TPO" secondAttribute="top" id="fG0-e2-Wio"/>
-                                                            <constraint firstItem="xF4-X9-TPO" firstAttribute="trailing" secondItem="urA-eP-ewX" secondAttribute="trailing" id="ieo-8G-VcA"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="urA-eP-ewX"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="NkE-pC-xEC"/>
-                                                    </scrollView>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-84-vHw" userLabel="Star View" customClass="DetailAppAttributeView" customModule="itunes_search" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="124" width="414" height="93.5"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="igY-n7-ZqG" firstAttribute="leading" secondItem="a4u-84-vHw" secondAttribute="leading" id="O56-ac-3ha"/>
-                                                    <constraint firstAttribute="trailing" secondItem="igY-n7-ZqG" secondAttribute="trailing" id="erp-f1-Ggg"/>
-                                                    <constraint firstAttribute="bottom" secondItem="igY-n7-ZqG" secondAttribute="bottom" id="ndL-UV-wHa"/>
-                                                    <constraint firstItem="igY-n7-ZqG" firstAttribute="top" secondItem="a4u-84-vHw" secondAttribute="top" id="qjP-Bn-yuG"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAh-yl-Knw" userLabel="New Feature View">
-                                                <rect key="frame" x="0.0" y="186.5" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="217.5" width="414" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="oeF-mb-X1q"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QD0-Vu-fxx" userLabel="Screenshot View">
-                                                <rect key="frame" x="0.0" y="386.5" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="417.5" width="414" height="500"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="500" id="IKN-gg-1rN"/>
@@ -93,7 +57,7 @@
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="INc-Md-3YX"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="height" secondItem="41i-QE-0Q6" secondAttribute="width" multiplier="0.3" id="Rza-MS-ung"/>
                                             <constraint firstItem="QD0-Vu-fxx" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="U9t-Nb-nmO"/>
-                                            <constraint firstItem="a4u-84-vHw" firstAttribute="height" secondItem="QsE-8r-qMx" secondAttribute="height" multiplier="0.5" id="YoS-ow-Ezy"/>
+                                            <constraint firstItem="a4u-84-vHw" firstAttribute="height" secondItem="QsE-8r-qMx" secondAttribute="height" multiplier="0.75" id="YoS-ow-Ezy"/>
                                             <constraint firstItem="QD0-Vu-fxx" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="efJ-jB-L7H"/>
                                             <constraint firstItem="LAh-yl-Knw" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="iay-lA-wSE"/>
                                             <constraint firstItem="QsE-8r-qMx" firstAttribute="top" secondItem="lEU-Mq-lAp" secondAttribute="top" id="ipr-xR-4NL"/>
@@ -124,6 +88,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attributeView" destination="a4u-84-vHw" id="axd-Pz-GzH"/>
                         <outlet property="titleView" destination="QsE-8r-qMx" id="uPv-fC-Zlr"/>
                     </connections>
                 </viewController>

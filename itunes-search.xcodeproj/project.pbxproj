@@ -207,9 +207,9 @@
 			children = (
 				47C77B1027EAF93C00CA17F5 /* DetailAppTitle */,
 				47C77B1127EAF94600CA17F5 /* DetailAppAttribute */,
+				47C77B1227EAF95300CA17F5 /* DetailNewFeature */,
 				47C77B1327EAF95C00CA17F5 /* DetailScreenShot */,
 				47C77B1427EAF96800CA17F5 /* DetailDeacription */,
-				47C77B1227EAF95300CA17F5 /* DetailNewFeature */,
 			);
 			path = DetailSubView;
 			sourceTree = "<group>";

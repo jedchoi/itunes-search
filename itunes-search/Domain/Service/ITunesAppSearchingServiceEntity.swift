@@ -35,11 +35,13 @@ struct ITunesAppEntity: Codable {
     var price: String
     var screenshotUrls: [String]
     var sellerName: String
-    var genres: [String]
+    var primaryGenreName: String
     var contentAdvisoryRating: String
     var appVersion: String
     var releaseNotes: String
     var description: String
+    var currentVersionReleaseDate: String
+    var supportedLanguages: [String]
 
     enum CodingKeys: String, CodingKey {
         case id = "trackId"
@@ -51,10 +53,12 @@ struct ITunesAppEntity: Codable {
         case price = "formattedPrice"
         case screenshotUrls = "screenshotUrls"
         case sellerName = "sellerName"
-        case genres = "genres"
+        case primaryGenreName = "primaryGenreName"
         case contentAdvisoryRating = "contentAdvisoryRating"
         case appVersion = "version"
         case releaseNotes = "releaseNotes"
         case description = "description"
+        case currentVersionReleaseDate = "currentVersionReleaseDate"
+        case supportedLanguages = "languageCodesISO2A"
     }
 }

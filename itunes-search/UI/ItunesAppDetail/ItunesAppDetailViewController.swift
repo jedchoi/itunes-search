@@ -22,6 +22,7 @@ final class ItunesAppDetailViewController: UIViewController {
     }
     
     @IBOutlet weak var titleView: DetailAppTitleView!
+    @IBOutlet weak var attributeView: DetailAppAttributeView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,8 @@ final class ItunesAppDetailViewController: UIViewController {
             Logger.track("Encode Error")
             return
         }
-        titleView.frame.size.width = self.view.frame.width
         titleView.setup(data: encodedData)
+        attributeView.setup(data: encodedData)
     }
 }
 
