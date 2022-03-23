@@ -25,29 +25,53 @@ final class ItunesAppDetailViewController: UIViewController {
     @IBOutlet weak var attributeView: DetailAppAttributeView!
     @IBOutlet weak var newFeatureView: DetailNewFeatureView!
     @IBOutlet weak var newFeatureViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var screenhotCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.onViewDidLoad()
+        screenhotCollectionView.dataSource = self
+        screenhotCollectionView.delegate = self
     }
     
     private func updateUI() {
         DispatchQueue.main.async {
-            self.updateAppTitleView()
-
+            guard let data = try? JSONEncoder().encode(self.app), let encodedData = String.init(data: data, encoding: .utf8) else {
+                Logger.track("Encode Error")
+                return
+            }
+            self.titleView.setup(data: encodedData)
+            self.attributeView.setup(data: encodedData)
+            self.newFeatureView.setup(data: encodedData, delegate: self)
+            self.screenhotCollectionView.reloadData()
         }
-    }
-    
-    private func updateAppTitleView() {
-        guard let data = try? JSONEncoder().encode(app), let encodedData = String.init(data: data, encoding: .utf8) else {
-            Logger.track("Encode Error")
-            return
-        }
-        titleView.setup(data: encodedData)
-        attributeView.setup(data: encodedData)
-        newFeatureView.setup(data: encodedData, delegate: self)
     }
 }
+
+extension ItunesAppDetailViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return app.screenshotUrls.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailScreenShotCollectionViewCell", for: indexPath) as? DetailScreenShotCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configureCell(url: app.screenshotUrls[indexPath.item])
+        return cell
+    }
+}
+
+extension ItunesAppDetailViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.height*0.58, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+}
+
 
 extension ItunesAppDetailViewController: ItunesAppDetailViewProtocol {
     func displayAppDetail(app: ItunesAppDetailViewModel) {

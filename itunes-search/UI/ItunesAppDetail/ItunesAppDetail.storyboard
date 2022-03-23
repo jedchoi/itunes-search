@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                                 <rect key="frame" x="15" y="0.0" width="384" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-Mq-lAp">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="2500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsE-8r-qMx" userLabel="Title View" customClass="DetailAppTitleView" customModule="itunes_search" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="115"/>
@@ -39,10 +40,53 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QD0-Vu-fxx" userLabel="Screenshot View">
-                                                <rect key="frame" x="0.0" y="386.5" width="384" height="500"/>
+                                                <rect key="frame" x="0.0" y="386.5" width="384" height="400"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="naa-GD-Ck9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="400"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T1b-kz-TQX">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="DetailScreenShotCollectionViewCell" id="UdI-Bh-kjK" customClass="DetailScreenShotCollectionViewCell" customModule="itunes_search" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="CYF-tz-ani">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gth-0D-HGd">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="gth-0D-HGd" secondAttribute="height" multiplier="4:7" id="cb9-if-PHe"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="gth-0D-HGd" secondAttribute="bottom" id="2Kw-6F-mso"/>
+                                                                        <constraint firstItem="gth-0D-HGd" firstAttribute="top" secondItem="CYF-tz-ani" secondAttribute="top" id="I9W-7E-Slx"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="gth-0D-HGd" secondAttribute="trailing" id="QJz-5V-cQA"/>
+                                                                        <constraint firstItem="gth-0D-HGd" firstAttribute="leading" secondItem="CYF-tz-ani" secondAttribute="leading" id="hjc-nR-Mc5"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="screenshot" destination="gth-0D-HGd" id="Efq-mg-u1r"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="IKN-gg-1rN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="naa-GD-Ck9" secondAttribute="bottom" id="1RM-CB-Dvw"/>
+                                                    <constraint firstAttribute="height" constant="400" id="IKN-gg-1rN"/>
+                                                    <constraint firstItem="naa-GD-Ck9" firstAttribute="top" secondItem="QD0-Vu-fxx" secondAttribute="top" id="WRU-As-CSA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="naa-GD-Ck9" secondAttribute="trailing" id="Xvd-GS-Jf8"/>
+                                                    <constraint firstItem="naa-GD-Ck9" firstAttribute="leading" secondItem="QD0-Vu-fxx" secondAttribute="leading" id="gbt-Gg-1m3"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -50,7 +94,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="a4u-84-vHw" firstAttribute="centerX" secondItem="lEU-Mq-lAp" secondAttribute="centerX" id="6Ap-cF-hYO"/>
-                                            <constraint firstAttribute="height" constant="2500" id="Bkb-hb-AJu"/>
+                                            <constraint firstAttribute="height" constant="1500" id="Bkb-hb-AJu"/>
                                             <constraint firstItem="a4u-84-vHw" firstAttribute="width" secondItem="lEU-Mq-lAp" secondAttribute="width" id="FeK-fR-XpK"/>
                                             <constraint firstItem="a4u-84-vHw" firstAttribute="top" secondItem="QsE-8r-qMx" secondAttribute="bottom" constant="10" id="Fzm-f9-UEb"/>
                                             <constraint firstItem="LAh-yl-Knw" firstAttribute="top" secondItem="a4u-84-vHw" secondAttribute="bottom" constant="10" id="I9M-WV-x8n"/>
@@ -91,6 +135,7 @@
                         <outlet property="attributeView" destination="a4u-84-vHw" id="axd-Pz-GzH"/>
                         <outlet property="newFeatureView" destination="LAh-yl-Knw" id="zBN-qJ-BCL"/>
                         <outlet property="newFeatureViewHeightConstraint" destination="oeF-mb-X1q" id="haE-CC-hXP"/>
+                        <outlet property="screenhotCollectionView" destination="naa-GD-Ck9" id="kPS-kg-lzD"/>
                         <outlet property="titleView" destination="QsE-8r-qMx" id="uPv-fC-Zlr"/>
                     </connections>
                 </viewController>
