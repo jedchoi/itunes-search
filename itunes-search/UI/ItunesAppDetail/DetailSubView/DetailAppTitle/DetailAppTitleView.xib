@@ -58,14 +58,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ica-Rl-HvX" userLabel="Price Button View">
                                             <rect key="frame" x="0.0" y="135" width="257" height="50"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qby-OW-hTW">
-                                                    <rect key="frame" x="0.0" y="5" width="62" height="40"/>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qby-OW-hTW" userLabel="Price Button">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Button">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                                    <font key="NSFont" size="13" name="Helvetica-Bold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -89,7 +89,7 @@
                                                 <constraint firstItem="qby-OW-hTW" firstAttribute="leading" secondItem="ica-Rl-HvX" secondAttribute="leading" id="Dvf-Lk-N8y"/>
                                                 <constraint firstItem="qby-OW-hTW" firstAttribute="centerY" secondItem="ica-Rl-HvX" secondAttribute="centerY" id="H6Z-GH-5kK"/>
                                                 <constraint firstItem="4mi-zK-gSh" firstAttribute="height" secondItem="ica-Rl-HvX" secondAttribute="height" multiplier="0.8" id="PDu-7h-6dl"/>
-                                                <constraint firstItem="qby-OW-hTW" firstAttribute="height" secondItem="ica-Rl-HvX" secondAttribute="height" multiplier="0.8" id="Y4v-xX-nzp"/>
+                                                <constraint firstItem="qby-OW-hTW" firstAttribute="height" secondItem="ica-Rl-HvX" secondAttribute="height" id="Y4v-xX-nzp"/>
                                                 <constraint firstAttribute="trailing" secondItem="4mi-zK-gSh" secondAttribute="trailing" id="d29-5i-hJY"/>
                                             </constraints>
                                         </view>

@@ -64,7 +64,7 @@ class ITunesAppSearchingService: ITunesAppSearchingServiceInterface {
             } else {
                 self.disposables += self.getAppList(key: title).startWithResult({ result in
                     switch result {
-                    case .success(let _):
+                    case .success( _):
                         if let app = self.iTunesAppList.first(where: {$0.title == title}) {
                             observer.send(value: app)
                             observer.sendCompleted()
