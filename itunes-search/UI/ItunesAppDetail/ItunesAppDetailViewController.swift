@@ -21,11 +21,7 @@ final class ItunesAppDetailViewController: UIViewController {
         }
     }
     
-    @IBOutlet var appIconImageView: UIImageView!
-    @IBOutlet var appTitle: UILabel!
-    @IBOutlet var artist: UILabel!
-    @IBOutlet var priceButton: UIButton!
-    
+    @IBOutlet weak var titleView: DetailAppTitleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +36,12 @@ final class ItunesAppDetailViewController: UIViewController {
     }
     
     private func updateAppTitleView() {
-        appIconImageView.load(from: app.mainAppIconUrl)
-        appTitle.text = app.title
-        artist.text = app.sellerName
-        priceButton.titleLabel?.text = app.price
+        guard let data = try? JSONEncoder().encode(app), let encodedData = String.init(data: data, encoding: .utf8) else {
+            Logger.track("Encode Error")
+            return
+        }
+        titleView.frame.size.width = self.view.frame.width
+        titleView.setup(data: encodedData)
     }
 }
 
