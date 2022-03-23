@@ -28,6 +28,7 @@ final class ItunesAppDetailViewController: UIViewController {
     @IBOutlet weak var screenshotCollectionView: DetailScreenShotCollectionView!
     @IBOutlet weak var descriptionView: DetailDescriptionView!
     @IBOutlet weak var descriptionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var detailViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ extension ItunesAppDetailViewController: DetailNewFeatureHeightUpdateDelegate {
     func updateNewFeatureHeight(height: CGFloat) {
         Logger.track("text view height : \(height)")
         newFeatureViewHeightConstraint.constant = DETAIL_NEW_FEATURE_VIEW_DEFAULT_HEIGHT + (height - DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT)
+        detailViewHeightConstraint.constant += (height - DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT)
     }
 }
 
@@ -66,5 +68,6 @@ extension ItunesAppDetailViewController: DetailDescriptionHeightUpdateDelegate {
     func updateDescriptionHeight(height: CGFloat) {
         Logger.track("text view height : \(height)")
         descriptionViewHeightConstraint.constant = height
+        detailViewHeightConstraint.constant += (height - DETAIL_DESCRIPTION_VIEW_TEXT_VIEW_DEFAULT_HEIGHT)
     }
 }

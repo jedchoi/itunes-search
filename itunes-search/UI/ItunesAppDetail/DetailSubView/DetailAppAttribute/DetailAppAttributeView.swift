@@ -29,7 +29,7 @@ class DetailAppAttributeView: UIView {
     }
     
     func setup(data: String) {
-        guard let appData = try? JSONDecoder().decode(ItunesDetailAppAttributeViewModel.self, from: data.data(using: .utf8)!) else {
+        guard let appData = try? JSONDecoder().decode(DetailAppAttributeViewModel.self, from: data.data(using: .utf8)!) else {
             Logger.track("Decode Error : \(data)")
             return
         }
@@ -39,22 +39,3 @@ class DetailAppAttributeView: UIView {
 //        priceButton.titleLabel?.text = appData.price
     }
 }
-
-struct ItunesDetailAppAttributeViewModel: Codable {
-    var averageUserRating: Float
-    var userRatingCount: Int
-    var primaryGenreName: String
-    var contentAdvisoryRating: String
-    var sellerName: String
-    var supportedLanguages: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case averageUserRating = "averageUserRating"
-        case userRatingCount = "userRatingCount"
-        case primaryGenreName = "primaryGenreName"
-        case contentAdvisoryRating = "contentAdvisoryRating"
-        case sellerName = "sellerName"
-        case supportedLanguages = "languageCodesISO2A"
-    }
-}
-    

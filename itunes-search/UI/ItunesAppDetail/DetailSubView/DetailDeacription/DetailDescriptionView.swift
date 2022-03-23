@@ -12,8 +12,6 @@ protocol DetailDescriptionHeightUpdateDelegate: AnyObject {
     func updateDescriptionHeight(height: CGFloat)
 }
 
-public let DETAIL_DESCRIPTION_VIEW_TEXT_VIEW_DEFAULT_HEIGHT: CGFloat = 65.0
-
 class DetailDescriptionView: UIView {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var moreButton: UIButton!
@@ -41,7 +39,7 @@ class DetailDescriptionView: UIView {
     }
     
     func setup(data: String, delegate: DetailDescriptionHeightUpdateDelegate) {
-        guard let appData = try? JSONDecoder().decode(ItunesDetailDescriptionViewModel.self, from: data.data(using: .utf8)!) else {
+        guard let appData = try? JSONDecoder().decode(DetailDescriptionViewModel.self, from: data.data(using: .utf8)!) else {
             Logger.track("Decode Error : \(data)")
             return
         }
@@ -60,18 +58,8 @@ class DetailDescriptionView: UIView {
         }
     }
 
-    
     @IBAction func moreButtonPressed(_ sender: Any) {
         moreButton.isHidden = true
         delegate?.updateDescriptionHeight(height: descriptionTextView.estimatedHeight)
     }
 }
-
-struct ItunesDetailDescriptionViewModel: Codable {
-    var description: String
-
-    enum CodingKeys: String, CodingKey {
-        case description = "description"
-    }
-}
-    

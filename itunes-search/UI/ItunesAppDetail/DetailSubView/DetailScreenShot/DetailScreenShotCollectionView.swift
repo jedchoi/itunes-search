@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class DetailScreenShotCollectionView: UICollectionView {
-    var data: ItunesDetailScreenShotViewModel! {
+    var data: DetailScreenShotCollectionViewMobel! {
         didSet {
             DispatchQueue.main.async {
                 Logger.track()
@@ -19,7 +19,7 @@ class DetailScreenShotCollectionView: UICollectionView {
     }
     
     func setup(data: String) {
-        guard let appData = try? JSONDecoder().decode(ItunesDetailScreenShotViewModel.self, from: data.data(using: .utf8)!) else {
+        guard let appData = try? JSONDecoder().decode(DetailScreenShotCollectionViewMobel.self, from: data.data(using: .utf8)!) else {
             Logger.track("Decode Error : \(data)")
             return
         }
@@ -53,13 +53,3 @@ extension DetailScreenShotCollectionView: UICollectionViewDelegateFlowLayout {
         return 10
     }
 }
-
-
-struct ItunesDetailScreenShotViewModel: Codable {
-    var screenshotUrls: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case screenshotUrls = "screenshotUrls"
-    }
-}
-    

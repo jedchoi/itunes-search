@@ -34,7 +34,7 @@ class DetailAppTitleView: UIView {
     }
     
     func setup(data: String) {
-        guard let appData = try? JSONDecoder().decode(ItunesDetailAppTitleViewModel.self, from: data.data(using: .utf8)!) else {
+        guard let appData = try? JSONDecoder().decode(DetailAppTitleViewModel.self, from: data.data(using: .utf8)!) else {
             Logger.track("Decode Error : \(data)")
             return
         }
@@ -45,18 +45,3 @@ class DetailAppTitleView: UIView {
     }
 
 }
-
-struct ItunesDetailAppTitleViewModel: Codable {
-    var mainAppIconUrl: String
-    var title: String
-    var price: String
-    var sellerName: String
-
-    enum CodingKeys: String, CodingKey {
-        case mainAppIconUrl = "artworkUrl512"
-        case title = "trackName"
-        case price = "formattedPrice"
-        case sellerName = "sellerName"
-    }
-}
-    

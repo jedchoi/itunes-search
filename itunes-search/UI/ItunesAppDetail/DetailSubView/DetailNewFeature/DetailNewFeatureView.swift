@@ -44,7 +44,7 @@ class DetailNewFeatureView: UIView {
     }
     
     func setup(data: String, delegate: DetailNewFeatureHeightUpdateDelegate) {
-        guard let appData = try? JSONDecoder().decode(ItunesDetailNewFeatureViewModel.self, from: data.data(using: .utf8)!) else {
+        guard let appData = try? JSONDecoder().decode(DetailNewFeatureViewModel.self, from: data.data(using: .utf8)!) else {
             Logger.track("Decode Error : \(data)")
             return
         }
@@ -71,25 +71,3 @@ class DetailNewFeatureView: UIView {
         delegate?.updateNewFeatureHeight(height: releaseNote.estimatedHeight)
     }
 }
-
-struct ItunesDetailNewFeatureViewModel: Codable {
-    var appVersion: String
-    var releaseNotes: String
-    var currentVersionReleaseDate: String
-
-    enum CodingKeys: String, CodingKey {
-        case appVersion = "version"
-        case releaseNotes = "releaseNotes"
-        case currentVersionReleaseDate = "currentVersionReleaseDate"
-    }
-}
-
-extension UITextView {
-    var estimatedHeight: CGFloat {
-        let size = CGSize(width: self.frame.width, height: .infinity)
-        let estimatedSize = self.sizeThatFits(size)
-        Logger.track("estimatedSize \(estimatedSize)")
-        return estimatedSize.height
-    }
-}
-    
