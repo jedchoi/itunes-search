@@ -274,6 +274,11 @@
             <point key="canvasLocation" x="9" y="123"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Wd9-hg-Ndi">
+            <size key="intrinsicContentSize" width="69" height="13"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

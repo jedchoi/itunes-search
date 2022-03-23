@@ -14,11 +14,10 @@
 		47C77B0727EAF8DA00CA17F5 /* DetailAppTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C77B0627EAF8DA00CA17F5 /* DetailAppTitleView.xib */; };
 		47C77B0927EAF8F700CA17F5 /* DetailAppAttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C77B0827EAF8F700CA17F5 /* DetailAppAttributeView.xib */; };
 		47C77B0B27EAF90200CA17F5 /* DetailNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C77B0A27EAF90200CA17F5 /* DetailNewFeatureView.xib */; };
-		47C77B0D27EAF91200CA17F5 /* DetailScreenShotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C77B0C27EAF91200CA17F5 /* DetailScreenShotView.xib */; };
 		47C77B0F27EAF92400CA17F5 /* DetailDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C77B0E27EAF92400CA17F5 /* DetailDescriptionView.xib */; };
 		47C77B1627EAF9CF00CA17F5 /* DetailAppTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1527EAF9CF00CA17F5 /* DetailAppTitleView.swift */; };
 		47C77B1827EAF9DD00CA17F5 /* DetailAppAttributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1727EAF9DD00CA17F5 /* DetailAppAttributeView.swift */; };
-		47C77B1A27EAF9E400CA17F5 /* DetailScreenShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1927EAF9E400CA17F5 /* DetailScreenShotView.swift */; };
+		47C77B1A27EAF9E400CA17F5 /* DetailScreenShotCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1927EAF9E400CA17F5 /* DetailScreenShotCollectionView.swift */; };
 		47C77B1C27EAF9EC00CA17F5 /* DetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1B27EAF9EC00CA17F5 /* DetailDescriptionView.swift */; };
 		47C77B1E27EAF9F400CA17F5 /* DetailNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C77B1D27EAF9F400CA17F5 /* DetailNewFeatureView.swift */; };
 		8F38E7C6DEAF8A0BF9B496BE /* Pods_itunes_searchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB6FA9C21162A84D83A68D /* Pods_itunes_searchTests.framework */; };
@@ -93,11 +92,10 @@
 		47C77B0627EAF8DA00CA17F5 /* DetailAppTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAppTitleView.xib; sourceTree = "<group>"; };
 		47C77B0827EAF8F700CA17F5 /* DetailAppAttributeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAppAttributeView.xib; sourceTree = "<group>"; };
 		47C77B0A27EAF90200CA17F5 /* DetailNewFeatureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailNewFeatureView.xib; sourceTree = "<group>"; };
-		47C77B0C27EAF91200CA17F5 /* DetailScreenShotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenShotView.xib; sourceTree = "<group>"; };
 		47C77B0E27EAF92400CA17F5 /* DetailDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDescriptionView.xib; sourceTree = "<group>"; };
 		47C77B1527EAF9CF00CA17F5 /* DetailAppTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAppTitleView.swift; sourceTree = "<group>"; };
 		47C77B1727EAF9DD00CA17F5 /* DetailAppAttributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAppAttributeView.swift; sourceTree = "<group>"; };
-		47C77B1927EAF9E400CA17F5 /* DetailScreenShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenShotView.swift; sourceTree = "<group>"; };
+		47C77B1927EAF9E400CA17F5 /* DetailScreenShotCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenShotCollectionView.swift; sourceTree = "<group>"; };
 		47C77B1B27EAF9EC00CA17F5 /* DetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionView.swift; sourceTree = "<group>"; };
 		47C77B1D27EAF9F400CA17F5 /* DetailNewFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewFeatureView.swift; sourceTree = "<group>"; };
 		62A9DC7E8BE2DBE7285F1A92 /* Pods-itunes-search-itunes-searchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search-itunes-searchUITests.debug.xcconfig"; path = "Target Support Files/Pods-itunes-search-itunes-searchUITests/Pods-itunes-search-itunes-searchUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,8 +244,7 @@
 		47C77B1327EAF95C00CA17F5 /* DetailScreenShot */ = {
 			isa = PBXGroup;
 			children = (
-				47C77B0C27EAF91200CA17F5 /* DetailScreenShotView.xib */,
-				47C77B1927EAF9E400CA17F5 /* DetailScreenShotView.swift */,
+				47C77B1927EAF9E400CA17F5 /* DetailScreenShotCollectionView.swift */,
 				B1D1BCCE27EB94DC001E8CA6 /* DetailScreenShotCollectionViewCell.swift */,
 			);
 			path = DetailScreenShot;
@@ -574,7 +571,6 @@
 				47C77B0B27EAF90200CA17F5 /* DetailNewFeatureView.xib in Resources */,
 				47C77B0727EAF8DA00CA17F5 /* DetailAppTitleView.xib in Resources */,
 				B178CC5227E6E1B100258026 /* MainTabHome.storyboard in Resources */,
-				47C77B0D27EAF91200CA17F5 /* DetailScreenShotView.xib in Resources */,
 				47C77B0F27EAF92400CA17F5 /* DetailDescriptionView.xib in Resources */,
 				B178CC4E27E6D3F200258026 /* ItunesAppSearch.storyboard in Resources */,
 				B167978B27E4CA5F00CD2C93 /* LaunchScreen.storyboard in Resources */,
@@ -748,7 +744,7 @@
 				B167978127E4CA5D00CD2C93 /* SceneDelegate.swift in Sources */,
 				47C77B1E27EAF9F400CA17F5 /* DetailNewFeatureView.swift in Sources */,
 				47C77B1C27EAF9EC00CA17F5 /* DetailDescriptionView.swift in Sources */,
-				47C77B1A27EAF9E400CA17F5 /* DetailScreenShotView.swift in Sources */,
+				47C77B1A27EAF9E400CA17F5 /* DetailScreenShotCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

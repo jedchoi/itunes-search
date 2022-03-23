@@ -12,5 +12,6 @@ class DetailScreenShotCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     func configureCell(url: String) {
         imageView.load(from: url)
+        imageView.cornerRadius = 10
     }
 }
