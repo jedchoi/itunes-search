@@ -62,6 +62,7 @@
 		B178CC6527E894DC00258026 /* ITunesAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */; };
 		B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */; };
 		B178CC6B27E8BE0700258026 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178CC6A27E8BE0700258026 /* UIImageView.swift */; };
+		B1D1BCCF27EB94DD001E8CA6 /* DetailScreenShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BCCE27EB94DC001E8CA6 /* DetailScreenShotCollectionViewCell.swift */; };
 		DA2B47FB93B301F20932E1C5 /* Pods_itunes_search_itunes_searchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		B178CC6427E894DC00258026 /* ITunesAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesAPIDataSource.swift; sourceTree = "<group>"; };
 		B178CC6827E8B6E300258026 /* AppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCollectionViewCell.swift; sourceTree = "<group>"; };
 		B178CC6A27E8BE0700258026 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		B1D1BCCE27EB94DC001E8CA6 /* DetailScreenShotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailScreenShotCollectionViewCell.swift; path = "itunes-search/UI/ItunesAppDetail/DetailScreenShotCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		B4734B4BD3A07A71AE67A8D2 /* Pods_itunes_search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68DCA9D9C5B525F6FD4866E /* Pods_itunes_search_itunes_searchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunes_search_itunes_searchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A710344FDFB9A5651EDB71 /* Pods-itunes-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunes-search.release.xcconfig"; path = "Target Support Files/Pods-itunes-search/Pods-itunes-search.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				47C77B0C27EAF91200CA17F5 /* DetailScreenShotView.xib */,
 				47C77B1927EAF9E400CA17F5 /* DetailScreenShotView.swift */,
+				B1D1BCCE27EB94DC001E8CA6 /* DetailScreenShotCollectionViewCell.swift */,
 			);
 			path = DetailScreenShot;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				B178CC6927E8B6E300258026 /* AppCollectionViewCell.swift in Sources */,
 				B11E44FB27E5B62C00C50423 /* ITunesAppSearchingService.swift in Sources */,
 				47C77AFE27E9C91500CA17F5 /* ItunesAppDetailViewController.swift in Sources */,
+				B1D1BCCF27EB94DD001E8CA6 /* DetailScreenShotCollectionViewCell.swift in Sources */,
 				B167977F27E4CA5C00CD2C93 /* AppDelegate.swift in Sources */,
 				B178CC5627E6E1DA00258026 /* MainTabHomeInteractor.swift in Sources */,
 				B11E450727E6C74D00C50423 /* ItunesAppSearchWireFrame.swift in Sources */,
