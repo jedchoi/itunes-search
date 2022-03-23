@@ -48,7 +48,7 @@
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="12"/>
+                                                                            <real key="value" value="13"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
@@ -59,41 +59,61 @@
                                                                             <rect key="frame" x="10" y="0.0" width="60.5" height="19.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-Yk-eU5" userLabel="Title Label">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="8.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="8"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f50-Re-DNt" userLabel="SubTitle Label">
-                                                                                    <rect key="frame" x="0.0" y="8.5" width="60.5" height="5.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <rect key="frame" x="0.0" y="8" width="60.5" height="5.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                     <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-Cs-50j">
-                                                                                    <rect key="frame" x="0.0" y="14" width="60.5" height="5.5"/>
+                                                                                    <rect key="frame" x="0.0" y="13.5" width="60.5" height="6"/>
                                                                                     <subviews>
-                                                                                        <view contentMode="left" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-hg-Ndi" customClass="CosmosView" customModule="Cosmos">
-                                                                                            <rect key="frame" x="-0.5" y="-3" width="35.5" height="5.5"/>
+                                                                                        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-hg-Ndi" customClass="CosmosView" customModule="Cosmos">
+                                                                                            <rect key="frame" x="0.0" y="1" width="60.5" height="5"/>
                                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <userDefinedRuntimeAttributes>
                                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
                                                                                                     <integer key="value" value="0"/>
                                                                                                 </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                                                    <real key="value" value="13"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                                                    <color key="value" systemColor="systemGrayColor"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                                    <color key="value" systemColor="systemGrayColor"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                                                    <color key="value" systemColor="systemGrayColor"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                                                                    <real key="value" value="1"/>
+                                                                                                </userDefinedRuntimeAttribute>
+                                                                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                                                    <color key="value" systemColor="systemGrayColor"/>
+                                                                                                </userDefinedRuntimeAttribute>
                                                                                             </userDefinedRuntimeAttributes>
                                                                                         </view>
                                                                                     </subviews>
-                                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="bottom" secondItem="Wd9-hg-Ndi" secondAttribute="bottom" constant="3" id="Xeb-ua-Pi7"/>
-                                                                                        <constraint firstItem="Wd9-hg-Ndi" firstAttribute="top" secondItem="gqq-Cs-50j" secondAttribute="top" constant="3" id="fTI-6M-j1L"/>
+                                                                                        <constraint firstItem="Wd9-hg-Ndi" firstAttribute="width" secondItem="gqq-Cs-50j" secondAttribute="width" id="65f-qe-7zZ"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="Wd9-hg-Ndi" secondAttribute="bottom" id="OTG-dq-Nhb"/>
+                                                                                        <constraint firstItem="Wd9-hg-Ndi" firstAttribute="height" secondItem="gqq-Cs-50j" secondAttribute="height" multiplier="0.8" id="TnZ-nv-jfl"/>
                                                                                         <constraint firstItem="Wd9-hg-Ndi" firstAttribute="leading" secondItem="gqq-Cs-50j" secondAttribute="leading" id="lhP-iN-8Dt"/>
                                                                                     </constraints>
                                                                                 </view>
                                                                             </subviews>
                                                                             <constraints>
+                                                                                <constraint firstItem="gqq-Cs-50j" firstAttribute="height" secondItem="uNC-cT-N8x" secondAttribute="height" multiplier="0.305" id="CqM-lz-TcC"/>
                                                                                 <constraint firstItem="f50-Re-DNt" firstAttribute="height" secondItem="uNC-cT-N8x" secondAttribute="height" multiplier="0.275" id="WRY-ur-dI4"/>
-                                                                                <constraint firstItem="fNa-Yk-eU5" firstAttribute="height" secondItem="uNC-cT-N8x" secondAttribute="height" multiplier="0.45" id="bmB-gW-VI4"/>
+                                                                                <constraint firstItem="fNa-Yk-eU5" firstAttribute="height" secondItem="uNC-cT-N8x" secondAttribute="height" multiplier="0.42" id="bmB-gW-VI4"/>
                                                                             </constraints>
                                                                         </stackView>
                                                                     </subviews>
@@ -105,17 +125,17 @@
                                                                         <constraint firstItem="uNC-cT-N8x" firstAttribute="top" secondItem="ore-z4-enF" secondAttribute="top" id="eou-rY-tCq"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-dL-fn8" userLabel="Cancel Button View">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-dL-fn8" userLabel="price Button View">
                                                                     <rect key="frame" x="96" y="0.0" width="32" height="19.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmV-ER-HXj">
-                                                                            <rect key="frame" x="15" y="6.5" width="2" height="6.5"/>
+                                                                            <rect key="frame" x="15" y="6" width="2" height="7.5"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
                                                                                 <attributedString key="attributedTitle">
                                                                                     <fragment content="무료">
                                                                                         <attributes>
-                                                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                         </attributes>
                                                                                     </fragment>
@@ -127,7 +147,7 @@
                                                                     <constraints>
                                                                         <constraint firstItem="AmV-ER-HXj" firstAttribute="centerY" secondItem="ICF-dL-fn8" secondAttribute="centerY" id="HYy-U8-S4m"/>
                                                                         <constraint firstItem="AmV-ER-HXj" firstAttribute="leading" secondItem="ICF-dL-fn8" secondAttribute="leading" constant="15" id="IX0-Aa-yPz"/>
-                                                                        <constraint firstItem="AmV-ER-HXj" firstAttribute="height" secondItem="ICF-dL-fn8" secondAttribute="height" multiplier="0.35" id="XKA-S8-dur"/>
+                                                                        <constraint firstItem="AmV-ER-HXj" firstAttribute="height" secondItem="ICF-dL-fn8" secondAttribute="height" multiplier="0.4" id="XKA-S8-dur"/>
                                                                         <constraint firstAttribute="trailing" secondItem="AmV-ER-HXj" secondAttribute="trailing" constant="15" id="pvZ-5e-EO2"/>
                                                                     </constraints>
                                                                 </view>
@@ -254,14 +274,12 @@
             <point key="canvasLocation" x="9" y="123"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Wd9-hg-Ndi">
-            <size key="intrinsicContentSize" width="120" height="20"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

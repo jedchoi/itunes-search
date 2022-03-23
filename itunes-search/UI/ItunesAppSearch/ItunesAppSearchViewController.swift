@@ -101,7 +101,7 @@ extension ItunesAppSearchViewController: UICollectionViewDataSource {
 
 extension ItunesAppSearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.width*0.8)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.width*0.85)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
