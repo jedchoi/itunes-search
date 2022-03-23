@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOa-jR-BK1" userLabel="Title View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="124"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="205"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKB-ZT-y5g">
-                            <rect key="frame" x="20" y="10" width="104" height="104"/>
+                            <rect key="frame" x="20" y="10" width="185" height="185"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="lKB-ZT-y5g" secondAttribute="height" multiplier="1:1" id="kxJ-Go-hJo"/>
                             </constraints>
@@ -37,28 +37,28 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf8-I1-fHd">
-                            <rect key="frame" x="137" y="10" width="257" height="104"/>
+                            <rect key="frame" x="218" y="10" width="176" height="185"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gng-QT-wWz">
-                                    <rect key="frame" x="0.0" y="0.0" width="257" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="257" height="185"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="AOb-Nq-MnD" userLabel="Title Label">
-                                            <rect key="frame" x="0.0" y="0.0" width="257" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="85"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhu-A9-BId" userLabel="Artist Label">
-                                            <rect key="frame" x="0.0" y="48" width="257" height="28"/>
+                                            <rect key="frame" x="0.0" y="85" width="257" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ica-Rl-HvX" userLabel="Price Button View">
-                                            <rect key="frame" x="0.0" y="76" width="257" height="28"/>
+                                            <rect key="frame" x="0.0" y="135" width="257" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qby-OW-hTW">
-                                                    <rect key="frame" x="0.0" y="2.5" width="62" height="22.5"/>
+                                                    <rect key="frame" x="0.0" y="5" width="62" height="40"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                                         <attributedString key="attributedTitle">
@@ -72,14 +72,12 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mi-zK-gSh">
-                                                    <rect key="frame" x="234.5" y="2.5" width="22.5" height="22.5"/>
+                                                    <rect key="frame" x="217" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="4mi-zK-gSh" secondAttribute="height" multiplier="1:1" id="AkD-dX-9Tl"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="ellipsis" catalog="system" cornerStyle="capsule">
-                                                        <attributedString key="attributedTitle"/>
-                                                    </buttonConfiguration>
+                                                    <buttonConfiguration key="configuration" style="filled" image="ellipsis" catalog="system" title="" cornerStyle="capsule"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,6 +127,7 @@
             <constraints>
                 <constraint firstItem="OOa-jR-BK1" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Oes-fu-OU8"/>
                 <constraint firstItem="OOa-jR-BK1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Snu-DM-5XD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OOa-jR-BK1" secondAttribute="bottom" id="cwX-CJ-Haz"/>
                 <constraint firstItem="OOa-jR-BK1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uXf-d2-PhK"/>
             </constraints>
             <point key="canvasLocation" x="139" y="127"/>
