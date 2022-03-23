@@ -23,6 +23,8 @@ final class ItunesAppDetailViewController: UIViewController {
     
     @IBOutlet weak var titleView: DetailAppTitleView!
     @IBOutlet weak var attributeView: DetailAppAttributeView!
+    @IBOutlet weak var newFeatureView: DetailNewFeatureView!
+    @IBOutlet weak var newFeatureViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +45,19 @@ final class ItunesAppDetailViewController: UIViewController {
         }
         titleView.setup(data: encodedData)
         attributeView.setup(data: encodedData)
+        newFeatureView.setup(data: encodedData, delegate: self)
     }
 }
 
 extension ItunesAppDetailViewController: ItunesAppDetailViewProtocol {
     func displayAppDetail(app: ItunesAppDetailViewModel) {
         self.app = app
+    }
+}
+
+extension ItunesAppDetailViewController: DetailNewFeatureHeightUpdateDelegate {
+    func updateHeight(height: CGFloat) {
+        Logger.track("text view height : \(height)")
+        newFeatureViewHeightConstraint.constant = DETAIL_NEW_FEATURE_VIEW_DEFAULT_HEIGHT + (height - DETAIL_NEW_FEATURE_VIEW_TEXT_VIEW_DEFAULT_HEIGHT)
     }
 }

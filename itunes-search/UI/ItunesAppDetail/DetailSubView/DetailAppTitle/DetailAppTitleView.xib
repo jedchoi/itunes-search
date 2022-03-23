@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="205"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKB-ZT-y5g">
-                            <rect key="frame" x="20" y="10" width="185" height="185"/>
+                            <rect key="frame" x="0.0" y="10" width="185" height="185"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="lKB-ZT-y5g" secondAttribute="height" multiplier="1:1" id="kxJ-Go-hJo"/>
                             </constraints>
@@ -37,7 +38,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf8-I1-fHd">
-                            <rect key="frame" x="218" y="10" width="176" height="185"/>
+                            <rect key="frame" x="198" y="10" width="216" height="185"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gng-QT-wWz">
                                     <rect key="frame" x="0.0" y="0.0" width="257" height="185"/>
@@ -77,7 +78,9 @@
                                                         <constraint firstAttribute="width" secondItem="4mi-zK-gSh" secondAttribute="height" multiplier="1:1" id="AkD-dX-9Tl"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="ellipsis" catalog="system" title="" cornerStyle="capsule"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="" imagePadding="3" cornerStyle="capsule">
+                                                        <imageReference key="image" image="ellipsis" catalog="system" symbolScale="small"/>
+                                                    </buttonConfiguration>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,12 +115,12 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="lKB-ZT-y5g" firstAttribute="leading" secondItem="OOa-jR-BK1" secondAttribute="leading" constant="20" id="Nvd-5h-tCw"/>
+                        <constraint firstItem="lKB-ZT-y5g" firstAttribute="leading" secondItem="OOa-jR-BK1" secondAttribute="leading" id="Nvd-5h-tCw"/>
                         <constraint firstItem="lKB-ZT-y5g" firstAttribute="top" secondItem="OOa-jR-BK1" secondAttribute="top" constant="10" id="Y8b-La-fQ1"/>
                         <constraint firstAttribute="bottom" secondItem="lKB-ZT-y5g" secondAttribute="bottom" constant="10" id="dJs-zl-coK"/>
                         <constraint firstItem="nf8-I1-fHd" firstAttribute="top" secondItem="OOa-jR-BK1" secondAttribute="top" constant="10" id="hbX-2x-oPb"/>
                         <constraint firstItem="nf8-I1-fHd" firstAttribute="leading" secondItem="lKB-ZT-y5g" secondAttribute="trailing" constant="13" id="hsr-nj-WOz"/>
-                        <constraint firstAttribute="trailing" secondItem="nf8-I1-fHd" secondAttribute="trailing" constant="20" id="jPU-3p-lCi"/>
+                        <constraint firstAttribute="trailing" secondItem="nf8-I1-fHd" secondAttribute="trailing" id="jPU-3p-lCi"/>
                         <constraint firstAttribute="bottom" secondItem="nf8-I1-fHd" secondAttribute="bottom" constant="10" id="qo5-8s-Yxo"/>
                     </constraints>
                 </view>
