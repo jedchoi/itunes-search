@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct  DetailAppAttributeViewModel: Codable {
+struct DetailAppAttributeViewModel: Codable {
     var averageUserRating: Float
     var userRatingCount: Int
     var primaryGenreName: String
@@ -24,4 +24,3 @@ struct  DetailAppAttributeViewModel: Codable {
         case supportedLanguages = "languageCodesISO2A"
     }
 }
-    
