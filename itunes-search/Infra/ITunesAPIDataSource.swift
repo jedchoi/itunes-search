@@ -34,7 +34,7 @@ class ITunesAPIDataSource: ITunesAPIInterface {
     }
 
     func buildUrl(term: String) -> URL? {
-        let parameters = ["term":term, "country":"KR","media":"software","limit":"10"]
+        let parameters = ["term":term, "country":"KR","media":"software"]
 
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
