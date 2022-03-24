@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ReactiveSwift
 import UIKit
 
 protocol MainTabHomeInteractorInputProtocol: AnyObject {
@@ -16,8 +15,6 @@ protocol MainTabHomeInteractorInputProtocol: AnyObject {
 final class MainTabHomeInteractor: MainTabHomeInteractorInputProtocol {
     weak var view: MainTabHomeViewProtocol!
     var wireframe: MainTabHomeWireframeProtocol!
-
-    private var disposables = CompositeDisposable()
 
     init(view: MainTabHomeViewProtocol, wireframe: MainTabHomeWireframeProtocol) {
         self.view = view

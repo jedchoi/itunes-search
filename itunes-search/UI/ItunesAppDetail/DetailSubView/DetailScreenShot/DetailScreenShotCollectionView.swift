@@ -45,7 +45,6 @@ extension DetailScreenShotCollectionView: UICollectionViewDataSource {
 
 extension DetailScreenShotCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        Logger.track()
         return CGSize(width: collectionView.frame.height * 0.55, height: collectionView.frame.height)
     }
     

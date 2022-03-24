@@ -16,7 +16,10 @@ class ITunesAppSearchingService: ITunesAppSearchingServiceInterface {
     init() {
         iTunesAppList = []
         dataSource = DependencyResolver.resolve(ITunesAPIInterface.self)
-        
+    }
+    
+    deinit {
+        disposables.dispose()
     }
     
     func getAppList(key: String) -> SignalProducer<[ITunesAppEntity], TraceError> {
