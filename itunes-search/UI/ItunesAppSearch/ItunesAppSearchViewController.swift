@@ -58,7 +58,6 @@ extension ItunesAppSearchViewController: ItunesAppSearchViewProtocol {
 
 extension ItunesAppSearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        Logger.track(searchController.searchBar.searchTextField.text ?? "")
         // if you want to show recommended list, implement this function
     }
 }
@@ -69,7 +68,6 @@ extension ItunesAppSearchViewController: UISearchBarDelegate {
             Logger.track("no text")
             return
         }
-        Logger.track(key)
         interactor.searchApp(key: key)
     }
 }

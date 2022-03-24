@@ -8,12 +8,6 @@
 import Foundation
 import ReactiveSwift
 
-protocol ITunesAppSearchingServiceInterface: AnyObject {
-    var iTunesAppList: [ITunesAppEntity] { get set }
-    func getAppList(key: String) -> SignalProducer<[ITunesAppEntity], TraceError>
-    func getDetailAppInformation(title: String) -> SignalProducer<ITunesAppEntity, TraceError>
-}
-
 class ITunesAppSearchingService: ITunesAppSearchingServiceInterface {
     var iTunesAppList: [ITunesAppEntity]
     let dataSource: ITunesAPIInterface!
