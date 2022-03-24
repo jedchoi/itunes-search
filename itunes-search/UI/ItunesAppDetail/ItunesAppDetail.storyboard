@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -120,6 +120,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lEU-Mq-lAp" firstAttribute="leading" secondItem="vzP-Rd-6oC" secondAttribute="leading" id="JC5-gP-sHs"/>
                                     <constraint firstItem="lEU-Mq-lAp" firstAttribute="bottom" secondItem="vzP-Rd-6oC" secondAttribute="bottom" id="KDS-Na-yrR"/>
@@ -148,6 +149,7 @@
                         <outlet property="newFeatureView" destination="LAh-yl-Knw" id="zBN-qJ-BCL"/>
                         <outlet property="newFeatureViewHeightConstraint" destination="oeF-mb-X1q" id="haE-CC-hXP"/>
                         <outlet property="screenshotCollectionView" destination="ig5-48-zju" id="th4-xP-3aK"/>
+                        <outlet property="scrollView" destination="zU8-Jh-Lxd" id="FBz-3X-ASs"/>
                         <outlet property="titleView" destination="QsE-8r-qMx" id="uPv-fC-Zlr"/>
                     </connections>
                 </viewController>

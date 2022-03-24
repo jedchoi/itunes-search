@@ -21,6 +21,7 @@ final class ItunesAppDetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleView: DetailAppTitleView!
     @IBOutlet weak var attributeView: DetailAppAttributeView!
     @IBOutlet weak var newFeatureView: DetailNewFeatureView!
@@ -46,6 +47,7 @@ final class ItunesAppDetailViewController: UIViewController {
             self.newFeatureView.setup(data: encodedData, delegate: self)
             self.screenshotCollectionView.setup(data: encodedData)
             self.descriptionView.setup(data: encodedData, delegate: self)
+            self.scrollView.contentInset.top = -10
         }
     }
 }
