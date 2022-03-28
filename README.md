@@ -2,7 +2,7 @@
 
 1. App의 목적
   - App Store에서 어플리케이션을 검색하는 기능 만들기
-  - 검색한 어플리케이션의 List오 상세정보 확인
+  - 검색한 어플리케이션 List의 상세정보 확인
 
 2. 설계
   - 3 Layered Architecture 적용(UI, Domain, Infra)
