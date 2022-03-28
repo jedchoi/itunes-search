@@ -12,6 +12,7 @@
   - UI Layer: VIPER 패턴 적용
   - Domain Layer: Use Case - Service로 구분하여 UI는 UseCase를 통해서만 Domain에 접근하도록 제한
   - Infra Layer: 개발 편의를 위한 Fake 모듈과 실제 데이터를 제공하는 Infra 분리
+![Diagram](https://github.com/jedchoi/itunes-search/blob/master/Architecture.png)
 
 3. 설계 특장점
   - Data Model의 의존성 제거
