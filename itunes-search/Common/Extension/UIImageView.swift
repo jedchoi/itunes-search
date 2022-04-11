@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 extension UIImageView {
     @IBInspectable var cornerRadius: CGFloat {
@@ -23,14 +24,6 @@ extension UIImageView {
             Logger.track("URL convert error")
             return
         }
-        DispatchQueue.global().async { [weak self] in
-            guard let imageData = try? Data(contentsOf: url), let image = UIImage(data: imageData) else {
-                Logger.track("image get error")
-                return
-            }
-            DispatchQueue.main.async {
-                self?.image = image
-            }
-        }
+        self.kf.setImage(with: url)
     }
 }

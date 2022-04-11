@@ -9,7 +9,7 @@ target 'itunes-search' do
   pod 'ReactiveSwift', '~> 6.1'
   pod 'Swinject', '~> 2.7.1'
   pod 'Cosmos', '~> 23.0'
-
+  pod 'Kingfisher' 
   target 'itunes-searchTests' do
     inherit! :search_paths
     # Pods for testing

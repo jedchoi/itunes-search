@@ -7,6 +7,7 @@
 import UIKit
 import Foundation
 import Cosmos
+import Kingfisher
 
 class AppCollectionViewCell: UICollectionViewCell {
     @IBOutlet var appIcon: UIImageView!
@@ -16,6 +17,17 @@ class AppCollectionViewCell: UICollectionViewCell {
     @IBOutlet var starRatingView: CosmosView!
     
     @IBOutlet var screenShots: [UIImageView]!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        appIcon.kf.cancelDownloadTask()
+        appIcon.image = nil
+        screenShots.forEach {
+            $0.kf.cancelDownloadTask()
+            $0.image = nil
+        }
+    }
+    
     func configureCell(appInfo: ITunesSearchAppViewModel) {
         Logger.track()
         appIcon.load(from: appInfo.mainAppIconUrl)
